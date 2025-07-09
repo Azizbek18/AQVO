@@ -5,16 +5,16 @@
 @import "tailwindcss";
 
 .text{
-  font-family: "Poppins";
+  font-family: "Poppins",sans-serif;
   font-style: normal;
 }
 .poppins{
-  font-family: "Libertinus Math",cursive;
+  font-family: "Libertinus Math";
   color: white;
   font-weight: 500;
 }
 .oswald{
-  font-family: "Oswald",cursive;
+  font-family: "Oswald",sans-serif;
 }
 .box{
   font-family: "Montserrat Alternates", sans-serif;

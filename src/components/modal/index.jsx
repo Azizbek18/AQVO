@@ -50,18 +50,18 @@ export default function ContactModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex  justify-center items-center px-4">
-      <div className="bg-red-800 text-white p-6 py-[40px] rounded-md space-y-6 shadow-[0_20px_30px_-10px_rgba(255,255,255,0.4)] w-full  max-w-[550px] relative">
+      <div className="bg-red-800 text-white p-6 py-[40px] rounded-md space-y-6 shadow-[0_20px_30px_-10px_rgba(255,255,255,0.4)] w-full max-w-[550px] relative">
         <div className="absolute flex justify-center rounded-[50%] items-center pb-1 w-[22px] h-[22px] top-3 right-5 border-2">
             <button
             onClick={onClose}
-            className=" text-white rotate-[45deg] pl-1 text-[20px] font-[400] "
+            className=" text-white text-[20px] font-[400] "
             >
-            +
+            &times;
             </button>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-6">
             <input
                 {...register('firstName')}
               type="text"
@@ -126,9 +126,8 @@ export default function ContactModal({ isOpen, onClose }) {
           <div>
             <textarea
                 {...register('messages')}
-              rows="4"
               placeholder="Xabar"
-              className="w-full text mt-[60px] p-2 text-[18px] bg-transparent border border-white outline-none text-white placeholder-white rounded"
+              className="w-full h-[80px] lg:100px text mt-[30px] lg:mt-[60px] p-2 text-[18px] bg-transparent border border-white outline-none text-white placeholder-white rounded"
             />
           </div>
 

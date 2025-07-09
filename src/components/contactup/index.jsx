@@ -42,7 +42,7 @@ export default function ContactForm() {
   } 
 
   return (
-    <form onSubmit={handleSubmit(sentMessage)} className="bg-[#dd474700] text-white p-6 rounded-md space-y-6 w-full max-w-[600px] mx-auto">
+    <form onSubmit={handleSubmit(sentMessage)} className="bg-[#dd474700] text-white py-6 rounded-md space-y-6 w-full max-w-[600px] mx-auto">
       <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
         <div>
           <input
