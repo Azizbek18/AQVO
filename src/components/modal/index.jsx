@@ -54,7 +54,7 @@ export default function ContactModal({ isOpen, onClose }) {
         <div className="absolute flex justify-center rounded-[50%] items-center pb-1 w-[22px] h-[22px] top-3 right-5 border-2">
             <button
             onClick={onClose}
-            className=" text-white text-[20px] font-[400] "
+            className=" text-white flex justify-center items-center flex-col text-[20px] font-[400] "
             >
             &times;
             </button>
