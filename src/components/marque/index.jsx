@@ -31,21 +31,21 @@ const ImageList = [...Array(2)].flatMap(() => [
 
 return (
 <div className='bg-red-800'>
-    <div className="container flex items-center justify-between relative h-[250px]   mx-auto max-w-[1280px] ">
+    <div className="container flex flex-col lg:flex-row items-center justify-between relative h-[250px]   mx-auto max-w-[1280px] ">
         <div className="">
-            <h2 className='text-[25px] text-white sm:text-[32px] max-w-[415px]'>
+            <h2 className='text-[25px] text-center lg:text-start mt-[20px]  text-white sm:text-[32px] max-w-[415px]'>
                 SIZNING AQVO BILAN LAHZALARINGIZ
             </h2>
-            <div className="absolute left-[260px] top-[130px] ">
+            <div className="absolute  right-[40%] lg:left-[260px] lg:top-[130px] ">
                 <img className='w-[80px] sm:w-[200px] h-auto' src="/images/logo.png" alt="Sayt logosi" />
             </div>
         </div>
         <div className="flex flex-col gap-2 ">
-            <Link className='text-white border-2 rounded-[30px] px-[20px] py-[8px] '
+            <Link className='text-white text text-[16px] border-2  rounded-[30px] px-[15px] py-[4px] lg:px-[20px] lg:py-[8px] '
                 href="https://www.instagram.com/aqvo" target='_blank'>
             Bizning Instagram
             </Link>
-            <Link className='text-white border-2 rounded-[30px] px-[20px] py-[8px]' href="https://www.telegram.com/aqvo"
+            <Link className='text-white text text-[16px] border-2 rounded-[30px] px-[15px] py-[4px] lg:px-[20px] lg:py-[8px]' href="https://www.telegram.com/aqvo"
                 target='_blank'>
             Bizning Telegram
             </Link>

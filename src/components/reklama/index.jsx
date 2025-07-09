@@ -4,8 +4,8 @@ import React from 'react'
 function ReklamaPage() {
   return (
     <div>
-        <div className="relative w-full h-[250px] ">
-            <Image fill src='/images/reklama.jpg' alt='Reklama' />  
+        <div className="relative overflow-hidden rounded-[5px] lg:rounded-[20px] w-full h-[100px] lg:h-[210px] ">
+            <Image fill className='w-full h-full object-cover ' src='/images/reklama.jpg' alt='Reklama' />  
         </div>
     </div>
   )

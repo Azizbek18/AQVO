@@ -1,19 +1,25 @@
-import Image from 'next/image'
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import ContactModal from '../modal'
 
 function InforPage() {
+    const [open,setOpen] = useState(false)
 return (
 <div className='bg-red-800'>
-    <div className="pt-[150px] bg-red-800 ">
-        <marquee behavior="" direction="">
-            <p className='oswald text-[12vw] uppercase text-white  font-medium mr-4'>
+    <div className="pt-[150px] bg-red-800 overflow-hidden">
+        <div className="whitespace-nowrap flex animate-marquee animate-delay-[1s]">
+            <p className="oswald text-[12vw] uppercase text-white font-medium mr-4">
                 Tabiiy mahsulotlar! Sifat va ishonch!
             </p>
-        </marquee>
+            <p className="oswald text-[12vw] uppercase text-white font-medium mr-4">
+                Tabiiy mahsulotlar! Sifat va ishonch!
+            </p>
+        </div>
     </div>
-    <div className="container mx-auto max-w-[1280px] ">
-        <div className="flex justify-between  py-[60px] items-center ">
-            <p className='text w-[300px] text-[18px] '>
+
+    <div className="container px-[20px] mx-auto max-w-[1280px] ">
+        <div className="flex flex-col lg:flex-row justify-between gap-[30px]  py-[60px] items-center ">
+            <p className='text text-white w-full text-center lg:text-start lg:w-[400px] text-[20px] '>
                 AQVO – O‘zbekistonda birinchi bo‘lib sifat va halollikni o‘zida mujassam etgan, jiz mahsulotlarini
                 yangicha ta’m va zamonaviy dizaynda taqdim etuvchi yetakchi brend.
             </p>
@@ -22,6 +28,7 @@ return (
                     <img className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
                         src="/images/logoImg.png" alt="Logo" />
                     <div
+                        onClick={()=>setOpen(true)}
                         className="absolute inset-0 flex items-center bg-[#a78861] justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-white text-[20px] font-semibold">Buyurtma</span>
                     </div>
@@ -29,8 +36,8 @@ return (
             </div>
         </div>
     </div>
+    <ContactModal isOpen={open} onClose={()=>setOpen(false)} />
 </div>
 )
 }
-
 export default InforPage

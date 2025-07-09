@@ -5,16 +5,20 @@
 @import "tailwindcss";
 
 .text{
-  color: white;
-  font-family: "Poppins";
+  font-family: "Poppins",cursive;
   font-style: normal;
 }
 .poppins{
-  font-family: "Libertinus Math";
+  font-family: "Libertinus Math",cursive;
   color: white;
+  font-weight: 500;
 }
 .oswald{
-  font-family: "Oswald";
+  font-family: "Oswald",cursive;
+}
+.box{
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
 }
 
 @keyframes marquee {
@@ -33,6 +37,22 @@
   100% {
     transform: translateX(0%);
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  animation: marquee 15s linear infinite;
+  animation-delay: 3s;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .animate-marquee {

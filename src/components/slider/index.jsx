@@ -51,7 +51,7 @@ function SliderPage() {
             className='w-full h-full object-cover '
           />
           <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
-            <h2 className="text  text-white text-[35px] ss:text-[50px] md:text-[76px] lg:text-[86px] max-w-[620px] lg:max-w-[1060px] text-center uppercase leading-[110%] font-semibold z-10">
+            <h2 className="box mb-4  text-white text-[35px] ss:text-[50px] md:text-[76px] lg:text-[86px] max-w-[620px] lg:max-w-[1000px] text-center uppercase leading-[110%] font-semibold z-10">
               {slide.title}
             </h2>
             <p className='text-white text-[15px] ss:text-[16px] md:text-[17px] lg:text-[18px] max-w-[620px] lg:max-w-[760px] text-center z-10'>

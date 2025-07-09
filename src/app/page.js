@@ -5,7 +5,8 @@ import MarquePage from '@/components/marque'
 import ReklamaPage from '@/components/reklama'
 import SliderPage from '@/components/slider'
 import React from 'react'
-
+import { ToastContainer } from 'react-toastify'
+  
 function HomePage() {
   return (
     <>
@@ -15,6 +16,7 @@ function HomePage() {
       <MarquePage/>
       <ContactPage/>
       <AboutPage/>
+      <ToastContainer position='top-right' autoClose={3000} />
     </>
   )
 }
