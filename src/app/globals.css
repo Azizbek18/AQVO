@@ -5,7 +5,7 @@
 @import "tailwindcss";
 
 .text{
-  font-family: "Poppins",cursive;
+  font-family: "Poppins";
   font-style: normal;
 }
 .poppins{

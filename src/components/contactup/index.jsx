@@ -62,7 +62,7 @@ export default function ContactForm() {
             name="lastName"
             id="lastName"
             placeholder="Familiyangiz"
-            className="w-full bg-transparent text text-[12px] lg:text-[18px border-b border-white outline-none py-2 placeholder-white"
+            className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function ContactForm() {
             name="phoneNumber"
             id="phoneNumber"
             placeholder="Telefon raqamingiz"
-            className="w-full bg-transparent text text-[12px] lg:text-[18px border-b border-white outline-none py-2 placeholder-white"
+            className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
 
@@ -84,7 +84,7 @@ export default function ContactForm() {
             name="telegram"
             id="telegram"
             placeholder="Telegram username"
-            className="w-full bg-transparent text text-[12px] lg:text-[18px border-b border-white outline-none py-2 placeholder-white"
+            className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
 
@@ -95,7 +95,7 @@ export default function ContactForm() {
             name="region"
             id="region"
             placeholder="Hudud"
-            className="w-full bg-transparent text text-[12px] lg:text-[18px border-b border-white outline-none py-2 placeholder-white"
+            className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
 
@@ -104,16 +104,16 @@ export default function ContactForm() {
             onClick={() => setIsOpen(!isOpen)}
             className="w-full border-b border-white py-2 flex justify-between items-center cursor-pointer"
           >
-            <span className='text-[12px] lg:text-[18px'>{selectedService}</span>
+            <span className='text-[12px] lg:text-[18px]'>{selectedService}</span>
             {isOpen ? <FaChevronUp /> : <FaChevronDown />}
           </div>
           {isOpen && (
-            <div className="absolute bg-white text-black text-[12px] lg:text-[18px mt-1 w-full rounded shadow z-50">
+            <div className="absolute bg-white text-black text-[12px] lg:text-[18px] mt-1 w-full rounded shadow z-50">
               {serviceOptions.map((option, idx) => (
                 <div
                   key={idx}
                   onClick={() => handleServiceSelect(option)}
-                  className="px-4 py-2 hover:bg-gray-200 text-[12px] lg:text-[18px cursor-pointer"
+                  className="px-4 py-2 hover:bg-gray-200 text-[12px] lg:text-[18px] cursor-pointer"
                 >
                   {option}
                 </div>
@@ -128,7 +128,7 @@ export default function ContactForm() {
           {...register("messages")}
           id="messages"
           placeholder="Xabar"
-          className="w-full mt-2 h-[80px] lg:h-[100px] p-2 text-[12px] lg:text-[18px bg-transparent border border-white outline-none text-white placeholder-white rounded"
+          className="w-full mt-2 h-[80px] lg:h-[100px] p-2 text-[12px] lg:text-[18px] bg-transparent border border-white outline-none text-white placeholder-white rounded"
         />
       </div>
       <button

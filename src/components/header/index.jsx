@@ -23,8 +23,6 @@ function Header() {
     <div className='bg-red-800'>
       <div className="container px-[20px] lg:px-[0] py-[20px] mx-auto max-w-[1280px]">
         <div className="fixed mx-[20px] lg:mx-auto top-[20px] max-w-[1280px] left-0 right-0 z-50 bg-[#441118a1] py-[8px] justify-between items-center pl-[20px] pr-[20px] lg:pl-[40px] lg:pr-2 rounded-[30px] flex gap-5 backdrop-blur-md">
-          
-          {/* Chap menyu */}
           <div className="hidden lg:flex gap-5">
             <Link className='text-white text-[18px] font-[500]' href='/'>
               Bosh sahifa
@@ -33,13 +31,10 @@ function Header() {
               Biz haqimizda
             </Link>
           </div>
-
-          {/* Logo */}
           <Link className='relative w-[90px] h-[30px]' href='#'>
             <Image fill className='object-contain' src='/images/logo.png' alt='Sayt logosi' />
           </Link>
 
-          {/* Til va modal tugma */}
           <div className="hidden lg:flex items-center gap-2">
             <div className="relative w-full max-w-[80px] mx-auto">
               <button
@@ -71,8 +66,6 @@ function Header() {
               Bog'lanish
             </button>
           </div>
-
-          {/* Burger icon */}
           <div onClick={() => setMobileMenuOpen(true)} className="flex lg:hidden flex-col gap-1.5 cursor-pointer">
             <div className="w-[30px] h-[4px] rounded-[20px] bg-white" />
             <div className="w-[30px] h-[4px] rounded-[20px] bg-white" />
