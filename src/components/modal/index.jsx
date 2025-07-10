@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { useState } from 'react'
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { toast} from 'react-toastify';
 
@@ -9,7 +10,7 @@ export default function ContactModal({ isOpen, onClose }) {
   const [selectedService, setSelectedService] = useState("Xizmat turini tanlang")
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const {register,handleSubmit,setValue,reset,formState:{errors}} = useForm();
-
+  const {t} = useTranslation()
   const serviceOptions = ["Mahsulot", "Franshiza"]
 
   const handleServiceSelect = (option) => {
@@ -54,7 +55,7 @@ export default function ContactModal({ isOpen, onClose }) {
         <div className="absolute flex justify-center rounded-[50%] items-center pb-1 w-[22px] h-[22px] top-3 right-5 border-2">
             <button
             onClick={onClose}
-            className=" text-white flex justify-center items-center flex-col text-[20px] font-[400] "
+            className=" text-white pt-[1px] text-[20px] font-[400] "
             >
             &times;
             </button>

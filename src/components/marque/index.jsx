@@ -1,8 +1,10 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 function MarquePage() {
+const {t} = useTranslation()
 const imageList = [...Array(2)].flatMap(() => [
 "marque1.jpg",
 "marque2.jpg",
@@ -29,12 +31,14 @@ const ImageList = [...Array(2)].flatMap(() => [
 "mar9.jpg",
 ]);
 
+
+
 return (
 <div className='bg-red-800'>
     <div className="container flex px-[20px] flex-col lg:flex-row  justify-between relative h-[250px]   mx-auto max-w-[1280px] ">
         <div className="flex items-center">
             <h2 className='text-[25px] mt-[20px]  text-white sm:text-[32px] max-w-[400px]  '>
-                SIZNING AQVO BILAN LAHZALARINGIZ
+                {t("marqueTitle")}
             </h2>
             <div className="absolute  left-[280px] top-[80px] lg:left-[280px] lg:top-[150px] ">
                 <img className='w-[80px] sm:w-[200px] h-auto' src="/images/logo.png" alt="Sayt logosi" />
@@ -43,11 +47,11 @@ return (
         <div className="flex flex-col items-center justify-center gap-2 ">
             <Link className='text-white text text-[16px] border-2  rounded-[30px] px-[15px] py-[4px] lg:px-[20px] lg:py-[8px] '
                 href="https://www.instagram.com/aqvo_jir/" target='_blank'>
-            Bizning Instagram
+                {t("marqueLink1")}
             </Link>
-            <Link href="https://www.telegram.com/aqvo_jir/" className='text-white text text-[16px] border-2 rounded-[30px] px-[15px] py-[4px] lg:px-[20px] lg:py-[8px]' href="https://www.telegram.com/aqvo"
+            <Link href="https://www.telegram.com/aqvo_jir/" className='text-white text text-[16px] border-2 rounded-[30px] px-[15px] py-[4px] lg:px-[20px] lg:py-[8px]' 
                 target='_blank'>
-            Bizning Telegram
+                {t("marqueLink2")}
             </Link>
         </div>
     </div>

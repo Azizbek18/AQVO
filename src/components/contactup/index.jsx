@@ -1,15 +1,21 @@
 'use client'
 import axios from 'axios'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { toast} from 'react-toastify'
 
 export default function ContactForm() {
+  const {t} = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedService, setSelectedService] = useState('Xizmat turini tanlang')
-  const {register,handleSubmit,reset,setValue,formState:{errors}} = useForm()
+  const [selectedService, setSelectedService] = useState("")
+  useEffect(() => {
+    setSelectedService(t("contact6"))
+  }, [t])
+  const {register,handleSubmit,reset,setValue,formState:{errors}} = useForm("Xizmat turini tanlang")
   const serviceOptions = ['Mahsulot', 'Franshiza']
+  
 
   const handleServiceSelect = (option) => {
     setSelectedService(option)
@@ -50,7 +56,7 @@ export default function ContactForm() {
             type="text"
             name="firstName"
             id="firstName"
-            placeholder="Ismingiz"
+            placeholder={t("contact1")}
             className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
@@ -61,7 +67,7 @@ export default function ContactForm() {
             type="text"
             name="lastName"
             id="lastName"
-            placeholder="Familiyangiz"
+            placeholder={t("contact2")}
             className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
@@ -72,7 +78,7 @@ export default function ContactForm() {
             type="tel"
             name="phoneNumber"
             id="phoneNumber"
-            placeholder="Telefon raqamingiz"
+            placeholder={t("contact3")}
             className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
@@ -83,7 +89,7 @@ export default function ContactForm() {
             type="text"
             name="telegram"
             id="telegram"
-            placeholder="Telegram username"
+            placeholder={t("contact4")}
             className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
@@ -94,7 +100,7 @@ export default function ContactForm() {
             type="text"
             name="region"
             id="region"
-            placeholder="Hudud"
+            placeholder={t("contact5")}
             className="w-full bg-transparent text text-[12px] lg:text-[18px] border-b border-white outline-none py-2 placeholder-white"
           />
         </div>
@@ -127,7 +133,7 @@ export default function ContactForm() {
         <textarea
           {...register("messages")}
           id="messages"
-          placeholder="Xabar"
+          placeholder={t("contact7")}
           className="w-full mt-2 h-[80px] lg:h-[100px] p-2 text-[12px] lg:text-[18px] bg-transparent border border-white outline-none text-white placeholder-white rounded"
         />
       </div>
@@ -135,7 +141,7 @@ export default function ContactForm() {
         type="submit"
         className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded  lg:mt-4"
       >
-        Yuborish
+       {t("contactButton")}
       </button>
     </form>
   )
